@@ -1,3 +1,4 @@
+import 'package:coffee/views/slash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,14 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            "Coffee ☕",
-            style: TextStyle(fontSize: 30, color: Colors.brown),
-          ),
-        ),
+      debugShowCheckedModeBanner: false,
+      title: 'Coffee App',
+      // ---- Setup Theme ----
+      theme: ThemeData(
+        primaryColor: Color(0xFFEF6969)
       ),
+      home: SplashScreen(),
     );
   }
 }
